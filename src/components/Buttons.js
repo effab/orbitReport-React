@@ -8,7 +8,7 @@ const Buttons = (props, filterByType, setSat, displaySats) => {
           <button onClick={() => props.filterByType(sat)} key={id}>{sat} Orbit</button>
         )
       })}
-      <button onClick={() => setSat(this.satData)}>All Orbits</button>
+      <button onClick={() => setSat(this.props.satData)}>All Orbits</button>
     </div>
   );
 };
