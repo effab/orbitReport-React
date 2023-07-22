@@ -1,6 +1,6 @@
 import satData from "./satData";
 
-const Buttons = (props, filterByType, setSat, displaySats) => {
+const Buttons = (props, setSat) => {
     return (
     <div>
       {props.displaySats.map((sat, id) => {
@@ -8,7 +8,7 @@ const Buttons = (props, filterByType, setSat, displaySats) => {
           <button onClick={() => props.filterByType(sat)} key={id}>{sat} Orbit</button>
         )
       })}
-      <button onClick={() => setSat(this.props.satData)}>All Orbits</button>
+      <button onClick={() => setSat} key={satData}>All Orbits</button>
     </div>
   );
 };
